@@ -6,7 +6,7 @@
 
 - build
 ```
-$ docker build -t fast-api .   
+$ docker build -t fast-api .
 ```
 
 - docker run
@@ -19,4 +19,9 @@ $ docker run -d --name fast-api -p 80:80 fast-api
 http://localhost/docs#/default/read_item_items__item_id__get
 
 http://localhost/items/5?q=somequery
+```
+
+- docker pull
+```
+$ docker pull ghcr.io/mutao-net/fast-api:latest
 ```
