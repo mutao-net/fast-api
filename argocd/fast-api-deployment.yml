@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: fast-api
+  name: fast-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fast-api
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: fast-api
+    spec:
+      containers:
+      - image: mutaonet/fast-api:latest
+        name: fast-api
+      imagePullSecrets:
+      - name: regcred
+status: {}
